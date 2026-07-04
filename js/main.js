@@ -95,8 +95,10 @@
     elM.textContent = pad(Math.floor((left % 3600000) / 60000));
     elS.textContent = pad(Math.floor((left % 60000) / 1000));
   }
-  tick();
-  setInterval(tick, 1000);
+  if (elH && elM && elS) {
+    tick();
+    setInterval(tick, 1000);
+  }
 
   /* ---------- FAQ: close others when one opens ---------- */
   var faqs = document.querySelectorAll(".faq-item");
@@ -152,6 +154,37 @@
   } else if (glow) {
     glow.style.display = "none";
   }
+
+  /* ---------- floating fireflies (kunang-kunang) ---------- */
+  (function spawnFireflies() {
+    var container = document.querySelector(".fireflies");
+    if (!container) return;
+    var colors = ["#00e1d9", "#6ff2ec", "#34d399", "#00b5ae"];
+    var count = 30;
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < count; i++) {
+      var f = document.createElement("span");
+      f.className = "firefly";
+      var size = 2 + Math.random() * 4;
+      var x = Math.random() * 100;
+      var duration = 18 + Math.random() * 28;
+      var delay = -Math.random() * duration;
+      var drift = (Math.random() - 0.5) * 24;
+      var alpha = 0.45 + Math.random() * 0.55;
+      var color = colors[Math.floor(Math.random() * colors.length)];
+      f.style.left = x.toFixed(2) + "%";
+      f.style.width = size.toFixed(1) + "px";
+      f.style.height = size.toFixed(1) + "px";
+      f.style.background = color;
+      f.style.color = color;
+      f.style.setProperty("--drift", drift.toFixed(2) + "vw");
+      f.style.setProperty("--alpha", alpha.toFixed(2));
+      f.style.animationDuration = duration.toFixed(2) + "s";
+      f.style.animationDelay = delay.toFixed(2) + "s";
+      frag.appendChild(f);
+    }
+    container.appendChild(frag);
+  })();
 
   /* ---------- reveal on scroll ---------- */
   var revealTargets = document.querySelectorAll(
