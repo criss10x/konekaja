@@ -110,6 +110,49 @@
     });
   });
 
+  /* ---------- cursor neon glow ---------- */
+  var glow = document.getElementById("cursorGlow");
+  var finePointer = window.matchMedia("(pointer: fine)").matches;
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (glow && finePointer && !reducedMotion) {
+    var targetX = window.innerWidth / 2;
+    var targetY = window.innerHeight / 2;
+    var glowX = targetX;
+    var glowY = targetY;
+    var glowVisible = false;
+
+    window.addEventListener(
+      "mousemove",
+      function (e) {
+        targetX = e.clientX;
+        targetY = e.clientY;
+        if (!glowVisible) {
+          glowVisible = true;
+          glowX = targetX;
+          glowY = targetY;
+          glow.style.opacity = "1";
+        }
+      },
+      { passive: true }
+    );
+
+    document.documentElement.addEventListener("mouseleave", function () {
+      glowVisible = false;
+      glow.style.opacity = "0";
+    });
+
+    (function follow() {
+      // lerp for a smooth trailing motion
+      glowX += (targetX - glowX) * 0.12;
+      glowY += (targetY - glowY) * 0.12;
+      glow.style.transform = "translate(" + glowX + "px," + glowY + "px)";
+      requestAnimationFrame(follow);
+    })();
+  } else if (glow) {
+    glow.style.display = "none";
+  }
+
   /* ---------- reveal on scroll ---------- */
   var revealTargets = document.querySelectorAll(
     ".section-head, .stat-card, .promo-card, .product-card, .feature-card, .timeline-item, .cta-card"
