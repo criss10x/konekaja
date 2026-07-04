@@ -183,14 +183,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; letter-spa
   position: fixed;
   top: 0;
   left: 0;
-  width: 420px;
-  height: 420px;
-  margin: -210px 0 0 -210px;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.16) 0%, transparent 18%),
-    radial-gradient(circle at center, rgba(111, 242, 236, 0.26) 0%, rgba(0, 225, 217, 0.16) 25%, rgba(0, 181, 174, 0.07) 48%, transparent 72%);
-  box-shadow: 0 0 100px 40px rgba(0, 225, 217, 0.12);
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.22) 0%, transparent 22%),
+    radial-gradient(circle at center, rgba(111, 242, 236, 0.32) 0%, rgba(0, 225, 217, 0.18) 28%, rgba(0, 181, 174, 0.06) 52%, transparent 72%);
+  box-shadow: 0 0 40px 14px rgba(0, 225, 217, 0.14);
   pointer-events: none;
   mix-blend-mode: screen;
   opacity: 0;
