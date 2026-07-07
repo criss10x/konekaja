@@ -96,6 +96,45 @@
   <main>
     <!-- ============ HERO ============ -->
     <section class="hero" id="home">
+      <!-- floating glass coin bubbles (top 12 coins, 2 per bubble) -->
+      <div class="coin-bubbles" aria-hidden="true">
+        <span class="coin-bubble cb1">
+          <span class="coin3d">
+            <svg class="coin-face front" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#F7931A"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.5"/><path d="M18 15h7a4.25 4.25 0 0 1 0 8.5h-7m0-8.5v18.5m0-10h8a4.6 4.6 0 0 1 0 9.2h-8M21 11.5V15m5-3.5V15m-5 18.5V37m5-3.5V37" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="coin-face back" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#627EEA"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.5"/><path d="M24 8.5 14.5 24.2 24 30l9.5-5.8Z" fill="#fff" opacity=".9"/><path d="M24 33.2 14.5 27.4 24 40.5l9.5-13.1Z" fill="#fff" opacity=".72"/></svg>
+          </span>
+        </span>
+        <span class="coin-bubble cb2">
+          <span class="coin3d">
+            <svg class="coin-face front" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#131A20"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.5"/><defs><linearGradient id="cbsol" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs><path d="M16 17.2l2.7-2.7H32l-2.7 2.7zM32 25.7 29.3 23H16l2.7 2.7zM16 34.2l2.7-2.7H32l-2.7 2.7z" fill="url(#cbsol)"/></svg>
+            <svg class="coin-face back" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#F0B90B"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/><path d="M24 10.8 27.6 14.4 24 18l-3.6-3.6zM24 30l3.6 3.6L24 37.2l-3.6-3.6zM14.4 20.4 18 24l-3.6 3.6L10.8 24zM33.6 20.4 37.2 24l-3.6 3.6L30 24zM24 20.4 27.6 24 24 27.6 20.4 24z" fill="#fff"/></svg>
+          </span>
+        </span>
+        <span class="coin-bubble cb3">
+          <span class="coin3d">
+            <svg class="coin-face front" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#26A17B"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.26)" stroke-width="1.5"/><path d="M14 15h20M24 15v19M17.5 21.5h13" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg>
+            <svg class="coin-face back" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#3D4A55"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><path d="M14 15.5c3.2 3.3 5.8 5 10 5s6.8-1.7 10-5M14 32.5c3.2-3.3 5.8-5 10-5s6.8 1.7 10 5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg>
+          </span>
+        </span>
+        <span class="coin-bubble cb4">
+          <span class="coin3d">
+            <svg class="coin-face front" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#C2A633"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.5"/><path d="M19 14.5v19m0-19h5a9.5 9.5 0 0 1 0 19h-5M15 24h8.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="coin-face back" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#3468D1"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/><circle cx="24" cy="24" r="3.4" fill="#fff"/><circle cx="33" cy="24" r="2" fill="#fff"/><circle cx="28.5" cy="31.8" r="2" fill="#fff"/><circle cx="19.5" cy="31.8" r="2" fill="#fff"/><circle cx="15" cy="24" r="2" fill="#fff"/><circle cx="19.5" cy="16.2" r="2" fill="#fff"/><circle cx="28.5" cy="16.2" r="2" fill="#fff"/></svg>
+          </span>
+        </span>
+        <span class="coin-bubble cb5">
+          <span class="coin3d">
+            <svg class="coin-face front" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#2775CA"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.26)" stroke-width="1.5"/><path d="M24 13v22M29.6 18.3c-1.2-1.7-3.2-2.6-5.6-2.6-3.1 0-5.6 1.8-5.6 4.3s2.3 3.7 5.6 4.3 5.6 1.8 5.6 4.3-2.5 4.3-5.6 4.3c-2.4 0-4.4-.9-5.6-2.6" fill="none" stroke="#fff" stroke-width="3.1" stroke-linecap="round"/></svg>
+            <svg class="coin-face back" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#EB0029"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.24)" stroke-width="1.5"/><path d="M13.5 12.5 35 16.7 21.8 36.5Z" fill="#fff" opacity=".96"/><path d="M13.5 12.5l8.8 9.2M35 16.7l-12.7 5M22.3 21.7l-.5 14.8" fill="none" stroke="#EB0029" stroke-width="2.2"/></svg>
+          </span>
+        </span>
+        <span class="coin-bubble cb6">
+          <span class="coin3d">
+            <svg class="coin-face front" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0098EA"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.26)" stroke-width="1.5"/><path d="M15 13.8h18a2.7 2.7 0 0 1 2.35 4L26 36.2a2.3 2.3 0 0 1-4 0L12.65 17.8a2.7 2.7 0 0 1 2.35-4z" fill="#fff"/><path d="M24 14.5v13" fill="none" stroke="#0098EA" stroke-width="2.6"/></svg>
+            <svg class="coin-face back" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#345D9D"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="rgba(255,255,255,.24)" stroke-width="1.5"/><path d="M22.5 13.5V29.5a4.5 4.5 0 0 0 4.5 4.5h5M17 26.5l11-4.8" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </span>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="pill pill-glow">
@@ -123,30 +162,30 @@
         </div>
 
         <div class="hero-visual">
-          <div class="ticket-card" role="img" aria-label="Example over-the-counter exchange: 1,000 USDT for Indonesian Rupiah cash, delivered to Canggu">
-            <div class="ticket-head">
-              <span class="ticket-label">OTC Exchange</span>
-              <span class="ticket-live"><i aria-hidden="true"></i> Rate locked</span>
+          <div class="hero-coin" role="img" aria-label="A USDT coin flipping into an Indonesian Rupiah coin">
+            <div class="coin-flip">
+              <span class="coin-slice s1" aria-hidden="true"></span>
+              <span class="coin-slice s2" aria-hidden="true"></span>
+              <span class="coin-slice s3" aria-hidden="true"></span>
+              <span class="coin-slice s4" aria-hidden="true"></span>
+              <span class="coin-slice s5" aria-hidden="true"></span>
+              <span class="coin-slice s6" aria-hidden="true"></span>
+              <svg class="hcoin-face hcoin-front" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="100" fill="#26A17B"/>
+                <circle cx="100" cy="100" r="93" fill="none" stroke="rgba(0,0,0,0.16)" stroke-width="8" stroke-dasharray="3 6"/>
+                <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="3"/>
+                <path d="M56 64h88M100 64v72M74 92h52" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+                <text x="100" y="165" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="21" font-weight="700" letter-spacing="5" fill="rgba(255,255,255,0.88)">USDT</text>
+              </svg>
+              <svg class="hcoin-face hcoin-back" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="100" fill="#D91F33"/>
+                <circle cx="100" cy="100" r="93" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="8" stroke-dasharray="3 6"/>
+                <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="3"/>
+                <text x="100" y="124" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="76" font-weight="700" fill="#fff">Rp</text>
+                <text x="100" y="163" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="17" font-weight="700" letter-spacing="5" fill="rgba(255,255,255,0.88)">RUPIAH</text>
+              </svg>
             </div>
-            <div class="ticket-swap">
-              <div class="ticket-side">
-                <small>You send</small>
-                <b class="mono">1,000 <span class="unit">USDT</span></b>
-                <span class="net-chip">TRC-20</span>
-              </div>
-              <span class="ticket-arrow" aria-hidden="true"><svg class="icon"><use href="#i-swap"/></svg></span>
-              <div class="ticket-side right">
-                <small>You receive</small>
-                <b class="mono">Rp 16,380,000</b>
-                <span class="net-chip cash">Cash in hand</span>
-              </div>
-            </div>
-            <ul class="ticket-steps">
-              <li class="done"><svg class="icon"><use href="#i-check"/></svg> Agent identity verified</li>
-              <li class="done"><svg class="icon"><use href="#i-check"/></svg> Cash counted in front of you</li>
-              <li class="active"><span class="step-pulse" aria-hidden="true"></span> You send crypto — deal complete</li>
-            </ul>
-            <p class="ticket-note">Final rate quoted on WhatsApp · zero hidden fees</p>
+            <span class="coin-shadow" aria-hidden="true"></span>
           </div>
           <div class="float-chip chip-left">
             <svg class="icon"><use href="#i-pin"/></svg>
