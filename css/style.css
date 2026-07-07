@@ -183,12 +183,12 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; letter-spa
   position: fixed;
   top: 0;
   left: 0;
-  width: 90px;
-  height: 90px;
-  margin: -45px 0 0 -45px;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.06) 28%, transparent 55%);
+    radial-gradient(circle at center, rgba(0, 225, 217, 0.22) 0%, rgba(0, 225, 217, 0.08) 40%, transparent 62%);
   box-shadow: none;
   pointer-events: none;
   mix-blend-mode: screen;
