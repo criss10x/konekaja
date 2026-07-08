@@ -1,4 +1,4 @@
-/* Konek Aja — interactions */
+/* Crypto Exchange Bali interactions */
 (function () {
   "use strict";
 
@@ -188,7 +188,7 @@
 
   /* ---------- reveal on scroll ---------- */
   var revealTargets = document.querySelectorAll(
-    ".section-head, .stat-card, .promo-card, .product-card, .feature-card, .timeline-item, .cta-card"
+    ".section-head, .stat-card, .route-step, .asset-chip, .bali-map-wrap, .zone, .feature-card, .faq-item, .cta-card"
   );
   revealTargets.forEach(function (el) {
     el.classList.add("reveal");
