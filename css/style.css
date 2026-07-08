@@ -474,25 +474,28 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; letter-spa
   inset: 0;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  object-fit: contain;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .hcoin-front {
   transform: translateZ(9px);
-  filter: drop-shadow(0 0 44px rgba(38, 161, 123, 0.35));
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 40px rgba(38, 161, 123, 0.3));
 }
 
 .hcoin-back {
   transform: rotateY(180deg) translateZ(9px);
-  filter: drop-shadow(0 0 44px rgba(217, 31, 51, 0.3));
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 40px rgba(217, 31, 51, 0.28));
 }
 
-/* coin thickness: stacked slices between the two faces */
+/* coin thickness: stacked slices between the two faces,
+   sized just inside the coin disc so no ring leaks past the art */
 .coin-slice {
   position: absolute;
-  inset: 0;
+  inset: 12%;
   border-radius: 50%;
 }
 
