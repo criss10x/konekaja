@@ -188,7 +188,7 @@
 
   /* ---------- reveal on scroll ---------- */
   var revealTargets = document.querySelectorAll(
-    ".section-head, .stat-card, .route-step, .asset-chip, .bali-map-wrap, .zone, .feature-card, .faq-item, .cta-card"
+    ".section-head, .stat-card, .route-step, .asset-chip, .bali-map-wrap, .zone, .trust-tile, .faq-item, .cta-card"
   );
   revealTargets.forEach(function (el) {
     el.classList.add("reveal");

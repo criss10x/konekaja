@@ -1224,15 +1224,21 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
   color: var(--muted);
 }
 
-/* ---------- security features ---------- */
-.feature-grid {
+/* ---------- security: trust bento ---------- */
+.trust-bento {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "a a a b b b"
+    "a a a c c c"
+    "d d e e f f";
   gap: 16px;
 }
 
-.feature-card {
-  padding: 28px 26px;
+.trust-tile {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--card);
@@ -1241,25 +1247,82 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.feature-card:hover { border-color: var(--border-strong); transform: translateY(-4px); }
+.trust-tile:hover { border-color: var(--border-strong); transform: translateY(-4px); }
 
-.feature-icon {
+.trust-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
+  flex: none;
   border: 1px solid var(--border);
   border-radius: 13px;
   background: rgba(0, 225, 217, 0.08);
   color: var(--brand);
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
-.feature-icon .icon { width: 22px; height: 22px; }
+.trust-icon .icon { width: 22px; height: 22px; }
 
-.feature-card h3 { font-size: 1.08rem; margin-bottom: 7px; }
-.feature-card p { font-size: 0.92rem; color: var(--muted); }
+.trust-tile h3 { font-size: 1.06rem; margin-bottom: 6px; }
+.trust-tile p { font-size: 0.92rem; color: var(--muted); }
+
+/* anchor tile — the fiat-first guarantee the whole desk rests on */
+.trust-anchor {
+  padding: 32px;
+  border-color: var(--border-strong);
+  background:
+    radial-gradient(120% 130% at 12% 0%, rgba(0, 225, 217, 0.14), transparent 55%),
+    var(--card);
+  box-shadow: var(--shadow-1);
+}
+
+.trust-icon.lg {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 24px rgba(0, 225, 217, 0.22);
+}
+
+.trust-icon.lg .icon { width: 28px; height: 28px; }
+
+.trust-anchor h3 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); margin-bottom: 10px; }
+.trust-anchor p { font-size: 1.02rem; color: var(--text); max-width: 40ch; }
+
+.protocol-flow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 26px;
+}
+
+.flow-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(3, 13, 12, 0.4);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.flow-step .icon { width: 15px; height: 15px; }
+
+.flow-step.done {
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(52, 211, 153, 0.09);
+  color: var(--success);
+}
+
+.flow-arrow { display: inline-flex; color: var(--brand); }
+.flow-arrow .icon { width: 20px; height: 20px; }
 
 /* ---------- reviews marquee ---------- */
 .marquee { overflow: hidden; position: relative; z-index: 1; }
@@ -1547,7 +1610,16 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
   .cb6 { top: auto; bottom: 5%; right: 8%; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* trust bento: anchor on top, then paired tiles */
+  .trust-bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e"
+      "f f";
+  }
 
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
@@ -1624,7 +1696,11 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
   .stat-number { font-size: 1.55rem; }
   .stat-label { font-size: 0.78rem; }
 
-  .feature-grid { grid-template-columns: 1fr; }
+  .trust-bento {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c" "d" "e" "f";
+  }
+  .trust-anchor { padding: 26px; }
 
   .trade-size { grid-template-columns: 1fr; padding: 22px; }
   .trade-size-sep { width: 52px; height: 1px; margin: 0 auto; }
