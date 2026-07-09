@@ -11,10 +11,15 @@
   <meta property="og:title" content="Crypto Exchange Bali · Crypto to IDR Cash, Delivered" />
   <meta property="og:description" content="Verify the cash first, send crypto second. Verified agents deliver Rupiah anywhere in Bali in 20–65 minutes. No account, no hidden fees." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300E1D9'/%3E%3Cpath d='M18 26h28l-8-8M46 38H18l8 8' stroke='%23032422' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap" />
   <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">
   {
@@ -71,7 +76,7 @@
   <header class="site-header" id="siteHeader">
     <nav class="nav container" aria-label="Main navigation">
       <a href="#home" class="brand" aria-label="Crypto Exchange Bali home">
-        <span class="brand-mark"><svg class="icon"><use href="#i-swap"/></svg></span>
+        <span class="brand-mark"><img src="assets/logo.webp" width="256" height="239" alt="" aria-hidden="true" draggable="false" /></span>
         <span class="brand-name">Crypto Exchange <span class="brand-accent">Bali</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -328,82 +333,15 @@
 
         <div class="coverage">
           <figure class="bali-map-wrap">
-            <svg class="bali-map" viewBox="0 0 440 520" role="img" aria-labelledby="mapTitle mapDesc">
-              <title id="mapTitle">Map of South Bali</title>
-              <desc id="mapDesc">Coverage across South Bali, from Canggu south through the Bukit peninsula to Uluwatu, Nusa Dua and Kuta Selatan.</desc>
-              <defs>
-                <linearGradient id="landGrad" x1="0" y1="0" x2="0.4" y2="1">
-                  <stop offset="0" stop-color="#0b302c"/>
-                  <stop offset="1" stop-color="#072220"/>
-                </linearGradient>
-                <radialGradient id="seaGlow" cx="0.48" cy="0.5" r="0.6">
-                  <stop offset="0" stop-color="rgba(0,225,217,0.14)"/>
-                  <stop offset="1" stop-color="rgba(0,225,217,0)"/>
-                </radialGradient>
-              </defs>
-
-              <!-- sea glow + coverage rings -->
-              <rect x="0" y="0" width="440" height="520" fill="url(#seaGlow)"/>
-              <g class="reach" fill="none" stroke="var(--brand)">
-                <circle cx="214" cy="258" r="66"/>
-                <circle cx="214" cy="258" r="118"/>
-                <circle cx="214" cy="258" r="172"/>
-                <circle cx="214" cy="258" r="226"/>
-              </g>
-
-              <!-- South Bali landmass -->
-              <path class="land" d="M 118 108
-                C 150 74, 250 66, 322 92 C 356 105, 360 150, 356 188
-                C 352 220, 336 244, 320 262 C 306 278, 286 282, 282 298
-                C 330 300, 378 322, 384 372 C 389 416, 362 452, 318 468
-                C 256 490, 190 488, 146 460 C 106 438, 86 398, 96 366
-                C 105 338, 134 324, 146 312 C 158 300, 140 280, 132 258
-                C 120 226, 108 188, 110 156 C 111 130, 110 118, 118 108 Z"/>
-
-              <!-- central Bali reference dots -->
-              <circle class="pin-central" cx="232" cy="210" r="4"/>
-              <circle class="pin-central" cx="322" cy="206" r="4"/>
-
-              <!-- South Bali service pins -->
-              <g class="pin" style="--d:0s">
-                <circle class="ping" cx="132" cy="138" r="5"/>
-                <circle class="dot" cx="132" cy="138" r="4.5"/>
-                <text class="pin-label" x="144" y="142">Canggu</text>
-              </g>
-              <g class="pin" style="--d:0.5s">
-                <circle class="ping" cx="126" cy="182" r="5"/>
-                <circle class="dot" cx="126" cy="182" r="4.5"/>
-                <text class="pin-label" x="138" y="186">Seminyak</text>
-              </g>
-              <g class="pin" style="--d:1s">
-                <circle class="ping" cx="136" cy="226" r="5"/>
-                <circle class="dot" cx="136" cy="226" r="4.5"/>
-                <text class="pin-label" x="148" y="230">Kuta</text>
-              </g>
-              <g class="pin" style="--d:1.5s">
-                <circle class="ping" cx="170" cy="322" r="5"/>
-                <circle class="dot" cx="170" cy="322" r="4.5"/>
-                <text class="pin-label" x="182" y="326">Jimbaran</text>
-              </g>
-              <g class="pin" style="--d:2.5s">
-                <circle class="ping" cx="330" cy="372" r="5"/>
-                <circle class="dot" cx="330" cy="372" r="4.5"/>
-                <text class="pin-label end" x="318" y="376">Nusa Dua</text>
-              </g>
-              <g class="pin" style="--d:2s">
-                <circle class="ping" cx="128" cy="404" r="5"/>
-                <circle class="dot" cx="128" cy="404" r="4.5"/>
-                <text class="pin-label" x="140" y="408">Uluwatu</text>
-              </g>
-
-              <!-- compass -->
-              <g class="compass" transform="translate(402,54)">
-                <text x="0" y="-16">N</text>
-                <path d="M0 -11 L4.5 0 L0 -3 L-4.5 0 Z"/>
-                <line x1="0" y1="0" x2="0" y2="11"/>
-              </g>
-            </svg>
-            <figcaption class="map-cap"><span class="map-live"></span> South Bali · live agent coverage</figcaption>
+            <iframe
+              class="bali-map-embed"
+              title="Google Map of the South Bali service area, centred on Ngurah Rai Airport"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106104.35123915371!2d115.16721348159048!3d-8.774163308229156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2441650216933%3A0xdf71da6ddd7bcc1f!2sI%20Gusti%20Ngurah%20Rai%20International%20Airport!5e0!3m2!1sen!2sid!4v1783582692822!5m2!1sen!2sid"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+            <figcaption class="map-cap"><span class="map-live"></span> South Bali · our service area</figcaption>
+            <a class="map-open" href="https://www.google.com/maps/@-8.75,115.17,11z" target="_blank" rel="noopener"><svg class="icon"><use href="#i-pin"/></svg> Open in Google Maps</a>
           </figure>
 
           <ol class="zones">
@@ -621,7 +559,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="#home" class="brand">
-          <span class="brand-mark"><svg class="icon"><use href="#i-swap"/></svg></span>
+          <span class="brand-mark"><img src="assets/logo.webp" width="256" height="239" alt="" aria-hidden="true" draggable="false" /></span>
           <span class="brand-name">Crypto Exchange <span class="brand-accent">Bali</span></span>
         </a>
         <p>Crypto-to-fiat OTC exchange with island-wide cash delivery. Verify the cash first, send crypto second.</p>
