@@ -186,25 +186,46 @@
     container.appendChild(frag);
   })();
 
-  /* ---------- reveal on scroll ---------- */
+  /* ---------- reveal on scroll ----------
+     Content is never gated behind the observer: elements already in view
+     reveal immediately, and a failsafe reveals anything still hidden so a
+     misfiring observer or a headless renderer can never leave a blank section. */
   var revealTargets = document.querySelectorAll(
     ".section-head, .stat-card, .route-step, .asset-chip, .bali-map-wrap, .zone, .trust-tile, .faq-item, .cta-card"
   );
   revealTargets.forEach(function (el) {
     el.classList.add("reveal");
   });
-  var revealObserver = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-  revealTargets.forEach(function (el) {
-    revealObserver.observe(el);
-  });
+
+  function revealEl(el) {
+    el.classList.add("visible");
+  }
+
+  if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            revealEl(entry.target);
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+    );
+    revealTargets.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        revealEl(el); // already in view on load — show it right away
+      } else {
+        revealObserver.observe(el);
+      }
+    });
+    // safety net: if the observer never fires, don't leave content hidden
+    setTimeout(function () {
+      revealTargets.forEach(revealEl);
+    }, 3000);
+  } else {
+    revealTargets.forEach(revealEl);
+  }
 })();

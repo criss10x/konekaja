@@ -1576,20 +1576,73 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
   box-shadow: 0 10px 32px rgba(37, 211, 102, 0.6);
 }
 
-/* ---------- reveal on scroll ---------- */
+/* ---------- reveal on scroll: a distinct entrance per section ----------
+   Hidden states are gated behind :not(.visible) so the "shown" state is
+   simply the element's natural CSS. Easing is ease-out-quint. */
 .reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.66s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal:not(.visible) { opacity: 0; transform: translateY(24px); }
 
-/* staggered entrance for the route stations */
-.route-step.reveal { transition-delay: 0s; }
-.route-step:nth-child(2).reveal { transition-delay: 0.08s; }
-.route-step:nth-child(3).reveal { transition-delay: 0.16s; }
-.route-step:nth-child(4).reveal { transition-delay: 0.24s; }
+/* section headings: a calm rise */
+.section-head.reveal:not(.visible) { transform: translateY(20px); }
+
+/* stats: rise and settle while the numbers count up */
+.stat-card.reveal:not(.visible) { transform: translateY(30px) scale(0.96); }
+.stat-card:nth-child(2).reveal { transition-delay: 0.08s; }
+.stat-card:nth-child(3).reveal { transition-delay: 0.16s; }
+.stat-card:nth-child(4).reveal { transition-delay: 0.24s; }
+
+/* how it works: each station slides in from the side it sits on */
+.route-step:nth-child(odd).reveal:not(.visible) { transform: translateX(-46px); }
+.route-step:nth-child(even).reveal:not(.visible) { transform: translateX(46px); }
+.route-step:nth-child(2).reveal { transition-delay: 0.1s; }
+.route-step:nth-child(3).reveal { transition-delay: 0.2s; }
+.route-step:nth-child(4).reveal { transition-delay: 0.3s; }
+
+/* assets: coins pop into place in a quick cascade */
+.asset-chip.reveal { transition-duration: 0.5s, 0.5s; }
+.asset-chip.reveal:not(.visible) { transform: scale(0.5); }
+.asset-chip:nth-child(2).reveal { transition-delay: 0.035s; }
+.asset-chip:nth-child(3).reveal { transition-delay: 0.07s; }
+.asset-chip:nth-child(4).reveal { transition-delay: 0.105s; }
+.asset-chip:nth-child(5).reveal { transition-delay: 0.14s; }
+.asset-chip:nth-child(6).reveal { transition-delay: 0.175s; }
+.asset-chip:nth-child(7).reveal { transition-delay: 0.21s; }
+.asset-chip:nth-child(8).reveal { transition-delay: 0.245s; }
+.asset-chip:nth-child(9).reveal { transition-delay: 0.28s; }
+.asset-chip:nth-child(10).reveal { transition-delay: 0.315s; }
+.asset-chip:nth-child(11).reveal { transition-delay: 0.35s; }
+.asset-chip:nth-child(n+12).reveal { transition-delay: 0.385s; }
+
+/* coverage: the map settles in, the zone list builds in from the right */
+.bali-map-wrap.reveal:not(.visible) { transform: scale(0.95); }
+.zone.reveal:not(.visible) { transform: translateX(40px); }
+.zone:nth-child(2).reveal { transition-delay: 0.1s; }
+.zone:nth-child(3).reveal { transition-delay: 0.2s; }
+
+/* security: trust tiles scale up, the anchor tile leading */
+.trust-tile.reveal:not(.visible) { transform: scale(0.93) translateY(16px); }
+.trust-tile:nth-child(2).reveal { transition-delay: 0.08s; }
+.trust-tile:nth-child(3).reveal { transition-delay: 0.14s; }
+.trust-tile:nth-child(4).reveal { transition-delay: 0.2s; }
+.trust-tile:nth-child(5).reveal { transition-delay: 0.26s; }
+.trust-tile:nth-child(6).reveal { transition-delay: 0.32s; }
+
+/* faq: a subtle, quiet lift */
+.faq-item.reveal:not(.visible) { transform: translateY(14px); }
+.faq-item:nth-child(2).reveal { transition-delay: 0.05s; }
+.faq-item:nth-child(3).reveal { transition-delay: 0.1s; }
+.faq-item:nth-child(4).reveal { transition-delay: 0.15s; }
+.faq-item:nth-child(5).reveal { transition-delay: 0.2s; }
+.faq-item:nth-child(6).reveal { transition-delay: 0.25s; }
+.faq-item:nth-child(7).reveal { transition-delay: 0.3s; }
+
+/* final cta: a confident scale-in */
+.cta-card.reveal:not(.visible) { transform: scale(0.94); }
 
 /* ---------- responsive: tablet ---------- */
 @media (max-width: 1024px) {
@@ -1671,8 +1724,16 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
 
   .bali-map-embed { height: 340px; }
 
-  .nav .btn-sm { padding: 9px 14px; }
-  .nav .btn-sm .icon { width: 1.05em; height: 1.05em; }
+  /* nav WhatsApp button becomes a compact icon-only circle so it never
+     crowds the brand title on small screens */
+  .nav .btn-sm {
+    width: 44px;
+    padding: 0;
+    gap: 0;
+    font-size: 0;
+    border-radius: 50%;
+  }
+  .nav .btn-sm .icon { width: 20px; height: 20px; }
 
   .brand-name { font-size: 0.9rem; }
 
