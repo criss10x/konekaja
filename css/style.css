@@ -1,6 +1,6 @@
 /* ============================================================
    Crypto Exchange Bali — OTC crypto-to-cash, island-wide delivery
-   Static build · Clash Display + Satoshi + Spline Sans Mono
+   Static build · Cabinet Grotesk + Switzer + Spline Sans Mono
    Dark OLED teal theme · glassmorphism · brand #00E1D9
    ============================================================ */
 
@@ -30,8 +30,8 @@
   /* shape & type */
   --radius: 16px;
   --radius-sm: 10px;
-  --font-heading: "Clash Display", system-ui, sans-serif;
-  --font-body: "Satoshi", system-ui, -apple-system, sans-serif;
+  --font-heading: "Cabinet Grotesk", system-ui, sans-serif;
+  --font-body: "Switzer", system-ui, -apple-system, sans-serif;
   --font-mono: "Spline Sans Mono", ui-monospace, monospace;
 
   /* elevation scale */
@@ -57,8 +57,8 @@ img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 
-h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; }
-h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.12; letter-spacing: -0.012em; }
+h1, h2 { font-weight: 800; letter-spacing: -0.018em; }
 
 .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 
@@ -565,13 +565,17 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
   50% { transform: translateY(-9px); }
 }
 
-/* ---------- hero: floating glass coin bubbles ---------- */
+/* ---------- hero: floating glass coin bubbles ----------
+   The bubble layer sits BEHIND the hero content (z-index 0 vs the
+   grid's 1) so bubbles never cover the headline, copy, or buttons. */
 .coin-bubbles {
   position: absolute;
   inset: 0;
-  z-index: 3;
+  z-index: 0;
   pointer-events: none;
 }
+
+.hero-grid { position: relative; z-index: 1; }
 
 .coin-bubble {
   position: absolute;
@@ -1744,13 +1748,14 @@ h1, h2 { font-weight: 700; letter-spacing: -0.025em; }
   .chip-left { display: none; }
   .chip-right { bottom: -16px; right: 2px; }
 
-  /* coin bubbles: all six, scaled down and scattered */
-  .cb1 { --size: 64px; top: 26%; right: 4%; }
-  .cb2 { --size: 54px; top: 30%; left: 4%; }
+  /* coin bubbles: keep clear of the text block on phones — two small
+     ones above the pill, the rest gathered around the coin visual */
+  .cb1 { --size: 60px; top: auto; bottom: 26%; right: 4%; }
+  .cb2 { --size: 52px; top: auto; bottom: 32%; left: 4%; }
   .cb3 { --size: 48px; top: 78px; left: 4%; }
-  .cb4 { --size: 50px; bottom: 22%; left: 6%; }
+  .cb4 { --size: 50px; bottom: 8%; left: 6%; }
   .cb5 { --size: 50px; top: 74px; right: 5%; }
-  .cb6 { --size: 58px; bottom: 6%; right: 7%; }
+  .cb6 { --size: 58px; bottom: 4%; right: 7%; }
 
   .stats-grid { gap: 10px; }
   .stat-card { padding: 20px 12px; }
