@@ -1354,9 +1354,9 @@ h1, h2 { font-weight: 800; letter-spacing: -0.018em; }
 }
 
 .review-card {
-  width: 340px;
+  width: 300px;
   flex: none;
-  padding: 24px;
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--card);
@@ -1364,41 +1364,33 @@ h1, h2 { font-weight: 800; letter-spacing: -0.018em; }
   -webkit-backdrop-filter: blur(12px);
 }
 
-.stars {
-  display: inline-flex;
-  gap: 3px;
-  margin-bottom: 12px;
-  color: #fbbf24;
+.review-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
 }
 
-.stars .icon { width: 15px; height: 15px; }
+.review-body { padding: 18px 20px 20px; }
 
-.review-card > p { font-size: 0.93rem; color: var(--text); }
+.review-body p { font-size: 0.92rem; color: var(--text); }
 
 .reviewer {
   display: flex;
-  align-items: center;
-  gap: 11px;
-  margin-top: 16px;
+  align-items: baseline;
+  gap: 9px;
+  margin-top: 14px;
 }
 
-.avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--border-strong);
-  background: rgba(0, 225, 217, 0.1);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.95rem;
+.reviewer b { font-size: 0.95rem; font-family: var(--font-heading); }
+.reviewer small { color: var(--muted); font-size: 0.82rem; }
+
+.reviewer small::before {
+  content: "· ";
   color: var(--brand);
 }
-
-.reviewer b { display: block; font-size: 0.92rem; }
-.reviewer small { color: var(--muted); font-size: 0.8rem; }
 
 /* ---------- FAQ ---------- */
 .faq-list { display: grid; gap: 12px; }
