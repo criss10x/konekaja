@@ -4,6 +4,38 @@
    Dark OLED teal theme · glassmorphism · brand #00E1D9
    ============================================================ */
 
+/* ---------- self-hosted fonts (was Fontshare + Google Fonts) ----------
+   Files live in /assets/fonts. font-display: swap keeps text visible while
+   the woff2 loads. Spline Sans Mono ships as one variable file (500–700). */
+@font-face {
+  font-family: "Cabinet Grotesk"; font-style: normal; font-weight: 500;
+  font-display: swap; src: url("../assets/fonts/cabinet-grotesk-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cabinet Grotesk"; font-style: normal; font-weight: 700;
+  font-display: swap; src: url("../assets/fonts/cabinet-grotesk-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Cabinet Grotesk"; font-style: normal; font-weight: 800;
+  font-display: swap; src: url("../assets/fonts/cabinet-grotesk-800.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Switzer"; font-style: normal; font-weight: 400;
+  font-display: swap; src: url("../assets/fonts/switzer-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Switzer"; font-style: normal; font-weight: 500;
+  font-display: swap; src: url("../assets/fonts/switzer-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Switzer"; font-style: normal; font-weight: 600;
+  font-display: swap; src: url("../assets/fonts/switzer-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Spline Sans Mono"; font-style: normal; font-weight: 500 700;
+  font-display: swap; src: url("../assets/fonts/spline-sans-mono.woff2") format("woff2");
+}
+
 :root {
   /* surfaces */
   --bg: #030d0c;
