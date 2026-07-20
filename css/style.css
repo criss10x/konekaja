@@ -1218,6 +1218,14 @@ h1, h2 { font-weight: 800; letter-spacing: -0.018em; }
   color: var(--text);
 }
 
+.zone-link {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 225, 217, 0.4);
+}
+.zone-link:hover { text-decoration-color: var(--brand); }
+
 .zone.is-primary .zone-areas { color: var(--text); }
 .zone:not(.is-primary) .zone-areas { color: var(--muted); }
 
