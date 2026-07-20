@@ -31,11 +31,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="manifest" href="assets/site.webmanifest" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=switzer@400,500,600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap" />
+  <link rel="preload" as="image" href="assets/coin-usdt.webp" fetchpriority="high" />
+  <link rel="preload" href="/assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/cabinet-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">
   {
@@ -277,19 +275,19 @@
     <section class="stats" aria-label="Track record">
       <div class="container stats-grid">
         <div class="stat-card">
-          <span class="stat-number mono"><span class="count" data-target="2400" data-suffix="+">0+</span></span>
+          <span class="stat-number mono"><span class="count" data-target="2400" data-suffix="+">2,400+</span></span>
           <span class="stat-label">Satisfied clients</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number mono"><span class="count" data-target="42">0</span><span class="stat-unit"> min</span></span>
+          <span class="stat-number mono"><span class="count" data-target="42">42</span><span class="stat-unit"> min</span></span>
           <span class="stat-label">Average delivery time</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number mono"><span class="count" data-target="10" data-suffix="+">0+</span></span>
+          <span class="stat-number mono"><span class="count" data-target="10" data-suffix="+">10+</span></span>
           <span class="stat-label">Areas covered island-wide</span>
         </div>
         <div class="stat-card">
-          <span class="stat-number mono"><span class="count" data-target="15" data-suffix="+">0+</span></span>
+          <span class="stat-number mono"><span class="count" data-target="15" data-suffix="+">15+</span></span>
           <span class="stat-label">Blockchain networks</span>
         </div>
       </div>
@@ -432,7 +430,7 @@
                 <h3>South Bali</h3>
                 <span class="eta-badge"><svg class="icon"><use href="#i-clock"/></svg> 20–40 min</span>
               </div>
-              <p class="zone-areas">Canggu · Seminyak · Kuta · Jimbaran · Nusa Dua · Uluwatu</p>
+              <p class="zone-areas"><a class="zone-link" href="/canggu/">Canggu</a> · Seminyak · Kuta · Jimbaran · Nusa Dua · Uluwatu</p>
             </li>
             <li class="zone">
               <div class="zone-head">
@@ -657,6 +655,22 @@
               <span class="post-tag">Cash-out guide</span>
               <h3 class="post-title">How to Convert USDT to Cash (IDR) in Bali: The 2026 Guide</h3>
               <p class="post-excerpt">Exchanges, P2P, crypto ATMs or cash delivery? A clear breakdown of every way to turn stablecoins into Rupiah, and the fastest, safest route if you don't have an Indonesian bank account.</p>
+              <span class="post-more">Read the guide <svg class="icon"><use href="#i-arrow"/></svg></span>
+            </a>
+          </article>
+          <article class="post-card">
+            <a class="post-card-link" href="/blog/otc-vs-p2p-vs-exchange-bali/">
+              <span class="post-tag">Cash-out guide</span>
+              <h3 class="post-title">OTC vs P2P vs Exchanges: The Safest Way to Cash Out Crypto in Bali</h3>
+              <p class="post-excerpt">Exchange, P2P marketplace or OTC cash desk? A plain comparison of speed, KYC, cash in hand, and the real risk each one carries, including the P2P frozen-account trap most people miss.</p>
+              <span class="post-more">Read the guide <svg class="icon"><use href="#i-arrow"/></svg></span>
+            </a>
+          </article>
+          <article class="post-card">
+            <a class="post-card-link" href="/blog/digital-nomad-atm-fees-bali/">
+              <span class="post-tag">Nomad guide</span>
+              <h3 class="post-title">How Digital Nomads Avoid Sky-High ATM Fees in Bali</h3>
+              <p class="post-excerpt">Bali ATM fees quietly take 8 to 12 percent per withdrawal for foreigners. Where the money goes, and how nomads get Rupiah far cheaper by cashing out stablecoins instead.</p>
               <span class="post-more">Read the guide <svg class="icon"><use href="#i-arrow"/></svg></span>
             </a>
           </article>

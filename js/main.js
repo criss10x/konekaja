@@ -63,7 +63,13 @@
     },
     { threshold: 0.4 }
   );
+  /* The markup ships the final figure so crawlers and no-JS readers get the real
+     number. Zero it here — while the stats are still below the fold — so the
+     count-up has somewhere to climb from and never visibly jumps backwards. */
+  var wantsMotion = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll(".count").forEach(function (el) {
+    if (!wantsMotion) return; // leave the final figure in place
+    el.textContent = "0" + (el.dataset.suffix || "");
     countObserver.observe(el);
   });
 
