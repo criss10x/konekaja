@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://cryptoexchangebali.com/blog/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -93,6 +93,12 @@
   <url>
     <loc>https://cryptoexchangebali.com/blog/bali-atm-out-of-cash/</loc>
     <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cryptoexchangebali.com/blog/usdt-to-idr-rate-bali/</loc>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
